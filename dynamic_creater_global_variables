@@ -1,0 +1,24 @@
+import os
+import pwd
+
+"""For accessing the database"""
+
+host = "10.4.107.5"
+username = "root"
+password = ""
+specific_database = "dynamic" 
+
+"""File Access"""
+
+master_copy_path = "/home/" + pwd.getpwuid(os.getuid()).pw_name + "/qa/automation/configs/cfg/master_base.cfg"
+local_copy_path = "/home/" + pwd.getpwuid(os.getuid()).pw_name + "/qa/automation/configs/cfg/local_base.cfg"
+dev_path = "/home/" + pwd.getpwuid(os.getuid()).pw_name + "/qa/automation/configs/dev/auto/"
+cfg_path = "/home/" + pwd.getpwuid(os.getuid()).pw_name +"/qa/automation/configs/cfg/"
+#os.path.join(os.environ['P4_ROOT'],'qa','automation',os.environ['BRANCH'],'pata','tests','people','sterli','dynamicPy')
+
+"""Valid Devices"""
+
+valid_master = r"master|standby|standalone|backup_master"
+valid_local = r"local|managenode|branch"
+valid_client = r"mac|win\d|ios|linux|android"
+valid_ap = r"^ap\d|^apr"
