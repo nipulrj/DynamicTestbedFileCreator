@@ -3,7 +3,7 @@ import pwd
 
 """For accessing the database"""
 
-host = "10.4.107.5"
+host = "DATABASE_IP"
 username = "root"
 password = ""
 specific_database = "dynamic" 
